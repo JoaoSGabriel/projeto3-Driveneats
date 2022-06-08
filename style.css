@@ -1,0 +1,53 @@
+body {
+    display: none;
+}
+@media (max-width: 768px) {
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #E5E5E5;
+}
+.topo {
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    position: fixed;
+    top: 0;
+}
+.topo p:first-child {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 54px;
+}
+.topo p:last-child {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+.pedido {
+    width: 414px;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.pedido p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.pedido button {
+    border-radius: 50px;
+    width: 364px;
+    height: 61px;
+    background-color: #CBCBCB;
+    border: none;
+}
+}
