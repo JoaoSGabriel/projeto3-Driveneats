@@ -16,8 +16,8 @@
     <div class="chooseone">
         <div class="pedido">
             <p>Primeiro, seu prato</p>
-            <div class="options">
-                <div onclick="choose1()" class="option" id="um">
+            <div class="options pratoPrincipal">
+                <div onclick="choose(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/fettuccine-molho-cogumelos.jpg"/>
@@ -28,7 +28,7 @@
                         <div>R$ 69,90</div>
                     </div>
                 </div>
-                <div onclick="choose2()" class="option" id="dois">
+                <div onclick="choose(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/file-mignon-batata-duchesse.jpg"/>
@@ -39,7 +39,7 @@
                         <div>R$ 129,90</div>
                     </div>
                 </div>
-                <div onclick="choose3()" class="option" id="tres">
+                <div onclick="choose(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/salmao-molho-pimenta-rosa.jpg"/>
@@ -50,7 +50,7 @@
                         <div>R$ 117,90</div>
                     </div>
                 </div>
-                <div onclick="choose4()" class="option" id="quatro">
+                <div onclick="choose(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/ravioli-berinjela-molho-salvia.jpg"/>
@@ -61,7 +61,7 @@
                         <div>R$ 79,90</div>
                     </div>
                 </div>
-                <div onclick="choose5()" class="option" id="cinco">
+                <div onclick="choose(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/bombom-alcatra-tartar-banana.jpg"/>
@@ -72,7 +72,7 @@
                         <div>R$ 120,90</div>
                     </div>
                 </div>
-                <div onclick="choose6()" class="option" id="seis">
+                <div onclick="choose(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/gnocchi-de-azeitona-ao-creme-de-mandioquinha-38295.jpg"/>
@@ -87,8 +87,8 @@
         </div>
         <div class="pedido">
             <p>Agora, sua bebida</p>
-            <div class="options">
-                <div onclick="choose7()" class="option" id="sete">
+            <div class="options bebida">
+                <div onclick="choosebebida(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/CHATEAU-HAUT-BRION.jpg"/>
@@ -99,7 +99,7 @@
                         <div>R$ 149,90</div>
                     </div>
                 </div>
-                <div onclick="choose8()" class="option" id="oito">
+                <div onclick="choosebebida(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/chateau-lafite-rothschild.jpg"/>
@@ -110,7 +110,7 @@
                         <div>R$ 127,90</div>
                     </div>
                 </div>
-                <div onclick="choose9()" class="option" id="nove">
+                <div onclick="choosebebida(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/CHATEAU-LATOUR-.jpg"/>
@@ -121,7 +121,7 @@
                         <div>R$ 138,90</div>
                     </div>
                 </div>
-                <div onclick="choose10()" class="option" id="dez">
+                <div onclick="choosebebida(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/CHATEAU-MARGAUX.jpg"/>
@@ -136,8 +136,8 @@
         </div>
         <div class="pedidofinal">
             <p>Por fim, sua sobremesa</p>
-            <div class="options">
-                <div onclick="choose11()" class="option" id="onze">
+            <div class="options sobremesa">
+                <div onclick="choosesobremesa(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/Tiramisu.jpg"/>
@@ -148,7 +148,7 @@
                         <div>R$ 37,90</div>
                     </div>
                 </div>
-                <div onclick="choose12()" class="option" id="doze">
+                <div onclick="choosesobremesa(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/Petit-Gateau.jpg"/>
@@ -159,7 +159,7 @@
                         <div>R$ 39,90</div>
                     </div>
                 </div>
-                <div onclick="choose13()" class="option" id="treze">
+                <div onclick="choosesobremesa(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/Creme-Brulee.jpg"/>
@@ -170,7 +170,7 @@
                         <div>R$ 43,90</div>
                     </div>
                 </div>
-                <div onclick="choose14()" class="option" id="quatorze">
+                <div onclick="choosesobremesa(this)" class="option">
                     <div class="icon"><ion-icon name="checkmark-circle"></ion-icon></ion-icon></div>
                     <div class="imgoption">
                         <img src="./img/Crepe-Suzette.jpg"/>
