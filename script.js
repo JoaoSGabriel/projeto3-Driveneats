@@ -45,9 +45,9 @@ function fecharopedido () {
     }
 }
 
-let valor1 = document.querySelector(".pratoPrincipal .escolhe .text div:nth-child(3)");
-let valor2 = document.querySelector(".bebida .escolhe .text div:nth-child(3)");
-let valor3 = document.querySelector(".sobremsa .escolhe .text div:nth-child(3)");
+let valor1;
+let valor2;
+let valor3;
 let resposta1;
 let resposta2;
 let resposta3;
@@ -60,7 +60,15 @@ function mensagemzap () {
         resposta2 = vinhocaro.innerHTML;
         let sobremesacaro = document.querySelector(".sobremesa .escolhe .text div");
         resposta3 = sobremesacaro.innerHTML;
-        let uri = `Olá, gostaria de fazer o pedido: /n- Prato: ${resposta1} /n- Bebida: ${resposta2} /n- Sobremesa: ${resposta3} /nTotal: R$ 27.70`;
+        valor1 = document.querySelector(".pratoPrincipal .escolhe .text div:nth-child(3)");
+        valor2 = document.querySelector(".bebida .escolhe .text div:nth-child(3)");
+        valor3 = document.querySelector(".sobremesa .escolhe .text div:nth-child(3)");
+        let uri = `Olá, gostaria de fazer o pedido:
+        - Prato: ${resposta1}
+        - Bebida: ${resposta2}
+        - Sobremesa: ${resposta3}
+        
+        Total: socorro`;
         let encoded = encodeURIComponent(uri);
         const ultimaparte = document. querySelector("#meu-link");
         ultimaparte. href = `https://wa.me/5527997429980?text= ${encoded}`;
