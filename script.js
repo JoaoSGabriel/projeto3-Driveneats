@@ -36,18 +36,34 @@ function choosesobremesa (elemento) {
 }
 
 function fecharopedido () {
-    mensagemzap ();
     if (pratodopedido && bebidadopedido && sobremesadopedido) {
     let arvore = document.querySelector('.final')
     arvore.classList.add('escondido')
     let madeira = document.querySelector('.buy')
     madeira.classList.remove('escondido')
+    mensagemzap ();
     }
 }
 
-let mensagemAPI = "https://api.whatsapp.com/send?phone=5527997429980&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%20-%20Prato%3A%20" + "pratoescolhido" + "%20-%20Bebida%3A%20" + "bebidaescolido" + "%20-%20Sobremesa%3A%20" + "sobremesaescolhido" + "%20Total%3A%20" + "R%24%20" + "valortotal";
+let valor1 = document.querySelector(".pratoPrincipal .escolhe .text div:nth-child(3)");
+let valor2 = document.querySelector(".bebida .escolhe .text div:nth-child(3)");
+let valor3 = document.querySelector(".sobremsa .escolhe .text div:nth-child(3)");
+let resposta1;
+let resposta2;
+let resposta3;
 
 function mensagemzap () {
-    const a = document.querySelector("#meu-link");
-    a.href = mensagemAPI;
+    if (pratodopedido && bebidadopedido && sobremesadopedido) {
+        let comida = document.querySelector(".pratoPrincipal .escolhe .text div");
+        resposta1 = comida.innerHTML;
+        let vinhocaro = document.querySelector(".bebida .escolhe .text div");
+        resposta2 = vinhocaro.innerHTML;
+        let sobremesacaro = document.querySelector(".sobremesa .escolhe .text div");
+        resposta3 = sobremesacaro.innerHTML;
+        let uri = `Olá, gostaria de fazer o pedido: /n- Prato: ${resposta1} /n- Bebida: ${resposta2} /n- Sobremesa: ${resposta3} /nTotal: R$ 27.70`;
+        let encoded = encodeURIComponent(uri);
+        const ultimaparte = document. querySelector("#meu-link");
+        ultimaparte. href = `https://wa.me/5527997429980?text= ${encoded}`;
+    }
+    
 }
