@@ -55,6 +55,8 @@ let resposta1;
 let resposta2;
 let resposta3;
 let valortotal;
+let endereco;
+let nomecliente;
 
 function transformanumero () {
     arroz = document.querySelector(".pratoPrincipal .escolhe .text div:nth-child(3)");
@@ -73,6 +75,11 @@ function transformanumero () {
     valor2 = Number(valor2);
     valor3 = Number(valor3);
     valortotal = valor1 + valor2 + valor3;
+}
+
+function perguntafinal () {
+    endereco = prompt("Qual o seu endereço?")
+    nomecliente = prompt("Qual o seu nome?")
     mensagemzap ();
 }
 
@@ -89,7 +96,10 @@ function mensagemzap () {
         -Prato: ${resposta1}
         -Bebida: ${resposta2}
         -Sobremesa: ${resposta3}
-        Total: ${valortotal}`;
+        Total: ${valortotal}
+        
+        Nome: ${nomecliente}
+        Endereço: ${endereco}`;
         let encoded = encodeURIComponent(uri);
         const ultimaparte = document. querySelector("#meu-link");
         ultimaparte. href = `https://wa.me/5527997429980?text= ${encoded}`;
