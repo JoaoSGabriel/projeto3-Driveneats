@@ -105,9 +105,9 @@
                     <div class="imgoption">
                         <img src="./img/chateau-lafite-rothschild.jpg"/>
                     </div>
-                    <div class="text big">
-                        <div>Château Lafite Rothschild</div>
-                        <div>Apenas vinho caro</div>
+                    <div class="text">
+                        <div>Château Rothschild</div>
+                        <div>Apenas vinho caro, mas esse é premiado</div>
                         <div>R$ 127,90</div>
                     </div>
                 </div>
@@ -192,9 +192,34 @@
         </button>
     </div>
     <div class="buy escondido">
-        <a target="_blank" href="" id="meu-link">
-            <button onclick="perguntafinal()"><p>Fechar pedido</p></button>
-        </a>
+        <button onclick="perguntafinal()"><p>Fechar pedido</p></button>
+    </div>
+    <div class="bonuslegal escondido">
+        <div class="greenbox">
+            <div class="confirmeseupedido">Confirme seu pedido</div>
+            <div class="escolhadospratos">
+                <div class="detalhes">
+                    <div>nomedoprato</div>
+                    <div>valor</div>
+                </div>
+                <div class="detalhes">
+                    <div>nomedoprato</div>
+                    <div>valor</div>
+                </div>
+                <div class="detalhes">
+                    <div>nomedoprato</div>
+                    <div>valor</div>
+                </div>
+                <div class="detalhes especial">
+                    <div>TOTAL</div>
+                    <div>valor</div>
+                </div>
+            </div>
+            <a target="_blank" href="" id="meu-link">
+                <button onclick="confirmardados()">Tudo certo, pode pedir!</button>
+            </a>
+            <button onclick="cancelarpedido()">Cancelar</button>
+        </div>
     </div>
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

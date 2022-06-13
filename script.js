@@ -77,22 +77,55 @@ function transformanumero () {
     valortotal = valor1 + valor2 + valor3;
 }
 
+let mesabranca;
+let mesaverde;
+let tapetebranco;
+let tapeteamarela;
+let tapeteverde;
+let tapeteazul;
+let tapetevermelho;
+let tapeteroxo;
+let tapeterosa;
+
 function perguntafinal () {
+    mesabranca = document.querySelector(".bonuslegal");
+    mesabranca.classList.remove('escondido');
+    let comida = document.querySelector(".pratoPrincipal .escolhe .text div");
+    resposta1 = comida.innerHTML;
+    let vinhocaro = document.querySelector(".bebida .escolhe .text div");
+    resposta2 = vinhocaro.innerHTML;
+    let sobremesacaro = document.querySelector(".sobremesa .escolhe .text div");
+    resposta3 = sobremesacaro.innerHTML;
+    valortotal = valortotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    tapetebranco = document.querySelector(".detalhes:nth-child(1) div:nth-child(1)")
+    tapetebranco.innerHTML = `${resposta1}`
+    tapeteamarela = document.querySelector(".detalhes:nth-child(1) div:nth-child(2)")
+    tapeteamarela.innerHTML = `${arroz}`
+    tapeteverde = document.querySelector(".detalhes:nth-child(2) div:nth-child(1)")
+    tapeteverde.innerHTML = `${resposta2}`
+    tapeteazul = document.querySelector(".detalhes:nth-child(2) div:nth-child(2)")
+    tapeteazul.innerHTML = `${feijao}`
+    tapetevermelho = document.querySelector(".detalhes:nth-child(3) div:nth-child(1)")
+    tapetevermelho.innerHTML = `${resposta3}`
+    tapeteroxo = document.querySelector(".detalhes:nth-child(3) div:nth-child(2)")
+    tapeteroxo.innerHTML = `${macarrao}`
+    tapeterosa = document.querySelector(".detalhes:nth-child(4) div:nth-child(2)")
+    tapeterosa.innerHTML = `${valortotal}`
+}
+
+function cancelarpedido () {
+    mesaverde = document.querySelector(".bonuslegal");
+    mesaverde.classList.add('escondido');
+}
+
+function confirmardados () {
     endereco = prompt("Qual o seu endereço?")
     nomecliente = prompt("Qual o seu nome?")
     mensagemzap ();
 }
 
 function mensagemzap () {
-    if (pratodopedido && bebidadopedido && sobremesadopedido) {
-        let comida = document.querySelector(".pratoPrincipal .escolhe .text div");
-        resposta1 = comida.innerHTML;
-        let vinhocaro = document.querySelector(".bebida .escolhe .text div");
-        resposta2 = vinhocaro.innerHTML;
-        let sobremesacaro = document.querySelector(".sobremesa .escolhe .text div");
-        resposta3 = sobremesacaro.innerHTML;
-        valortotal = valortotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-        let uri = `Olá, gostaria de fazer o pedido:
+    let uri = `Olá, gostaria de fazer o pedido:
         -Prato: ${resposta1}
         -Bebida: ${resposta2}
         -Sobremesa: ${resposta3}
@@ -103,6 +136,4 @@ function mensagemzap () {
         let encoded = encodeURIComponent(uri);
         const ultimaparte = document. querySelector("#meu-link");
         ultimaparte. href = `https://wa.me/5527997429980?text= ${encoded}`;
-    }
-    
 }
